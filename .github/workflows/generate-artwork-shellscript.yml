@@ -14,6 +14,8 @@ jobs:
       run: ls -ltra
 
     - name: Execute Shell Script for ASCII workflow
-      run: ./ascii-script.sh    
-    
+      run: |
+        chmod +x ascii-script.sh 
+        ./ascii-script.sh    
+
 
