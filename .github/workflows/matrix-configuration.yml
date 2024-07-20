@@ -15,7 +15,7 @@ jobs:
       - name: Echo Docker Details
         run: docker info
 
-      - name: Run Images
+      - name: Run ${{ matrix.os}}
         run: docker run ${{ matrix.images }}
 
 #   deploy-on-windows:
