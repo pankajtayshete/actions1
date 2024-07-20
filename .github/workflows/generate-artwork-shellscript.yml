@@ -1,0 +1,19 @@
+name: Generate ASCII Artwork - Workflow
+
+on:
+  push
+
+jobs:
+  ascii_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v4
+
+    - name: List Repo Files
+      run: ls -ltra
+
+    - name: Execute Shell Script for ASCII workflow
+      run: ./ascii-script.sh    
+    
+
