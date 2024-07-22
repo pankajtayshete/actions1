@@ -1,0 +1,12 @@
+name: Testing self-hosted-mac-runner
+on:
+  workflow_dispatch:
+
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ECHO Contents
+        run: |
+          echo "Hello World!!!"
+          sleep 15s
