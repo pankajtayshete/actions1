@@ -5,10 +5,11 @@ on:
 
 jobs:
   testing:
-    runs-on: [self-hosted, test, macOS]
+    name: self-hosted mac-runner
+    runs-on: [self-hosted]
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
       - name: list ls
-        run: ls -l
+        run: ls -l && sleep 300
