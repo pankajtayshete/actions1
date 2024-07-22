@@ -1,6 +1,6 @@
 name: Vault demo
 on:
-  dispatch-workflow:
+  workflow_dispatch: 
 
 jobs:
   echo-vault-secret:
