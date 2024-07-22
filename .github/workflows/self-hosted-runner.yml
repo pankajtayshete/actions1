@@ -7,7 +7,8 @@ jobs:
   testing:
     runs-on: [self-hosted, test, macOS]
     steps:
-      - name: ECHO Contents
-        run: |
-          echo OK
-          sleep 15s
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: list ls
+        run: ls -l
