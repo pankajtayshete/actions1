@@ -1,0 +1,21 @@
+name: Label Issues 
+on:
+  issues:
+    types:
+      - opened
+ 
+jobs:
+  assign-label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Add a Label
+        env:
+          AWS_API_KEY: ${{ secrets.AWS_API_KEY }}
+        run: |
+          issue_title="${{ github.event.issue.title }}"
+          if [[ "$issue_title" == *"bug"* ]]; then
+            echo "Issue is about a bug!"
+            echo "Assigning Label -Bug ... ... ... ..."
+
